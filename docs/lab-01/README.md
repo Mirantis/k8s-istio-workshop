@@ -70,7 +70,7 @@ if [ "`ssh-add -l`" = "The agent has no identities." ]; then ssh-add; fi
 Clone this git repository:
 
 ```bash
-git clone https://github.com/ruzickap/k8s-istio-workshop
+git clone https://github.com/mirantis/k8s-istio-workshop
 cd k8s-istio-workshop
 ```
 

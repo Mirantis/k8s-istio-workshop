@@ -3,12 +3,12 @@ module.exports = {
   description: "Istio workshop running on OpenStack",
   base: '/k8s-istio-workshop/',
   head: [
-    ['link', { rel: "icon", href: "favicon.ico" }]
+    ['link', { rel: "icon", href: "/favicon.ico" }]
   ],
   themeConfig: {
     displayAllHeaders: true,
     lastUpdated: true,
-    repo: 'mirantis/k8s-istio-workshop',
+    repo: 'ruzickap/k8s-istio-workshop',
     docsDir: 'docs',
     editLinks: true,
     logo: '/istio.svg',
@@ -19,7 +19,7 @@ module.exports = {
         items: [
           { text: 'Istio', link: 'https://istio.io/' },
           { text: 'Istio docs', link: 'https://istio.io/docs/' },
-          { text: 'Istio workshop', link: 'https://github.com/mirantis/k8s-istio-workshop' },
+          { text: 'Istio workshop', link: 'https://github.com/ruzickap/k8s-istio-workshop' },
           { text: 'Istio demo', link: 'https://github.com/ruzickap/k8s-istio-demo' }
         ]
       }

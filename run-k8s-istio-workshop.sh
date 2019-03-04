@@ -38,7 +38,7 @@ clear
 # mkdir /var/tmp/test && cd /var/tmp/test
 # docker run -it -rm -e USER="$USER" -e OPENSTACK_PASSWORD="$OPENSTACK_PASSWORD" -v /home/$USER/.ssh:/root/.ssh:ro -v $PWD:/mnt ubuntu
 # apt-get update -qq && apt-get install -qq -y curl git pv > /dev/null
-# git clone https://github.com/ruzickap/k8s-istio-workshop && cd k8s-istio-workshop
+# git clone https://github.com/mirantis/k8s-istio-workshop && cd k8s-istio-workshop
 # ./run-k8s-istio-workshop.sh
 
 sed -n '/^Install necessary software into the Docker container:$/,$p' docs/lab-{01..12}/README.md | \

@@ -11,7 +11,7 @@ enforce access policies, verify service identity, secure service communication,
 and observe what exactly is going on with your services.
 
 * Full asciinema screencast: [https://asciinema.org/a/229605](https://asciinema.org/a/229605?autoplay=1)
-* GitHub repository: [https://github.com/ruzickap/k8s-istio-workshop](https://github.com/ruzickap/k8s-istio-workshop)
+* GitHub repository: [https://github.com/mirantis/k8s-istio-workshop](https://github.com/mirantis/k8s-istio-workshop)
 
 ## Requirements
 

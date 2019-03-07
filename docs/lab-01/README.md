@@ -15,7 +15,11 @@ Run Ubuntu docker image and mount the directory there:
 
 ```bash
 mkdir /var/tmp/test && cd /var/tmp/test
-docker run -it --rm -e USER="$USER" -v $PWD:/mnt -v $HOME/.ssh:/root/.ssh:ro ubuntu
+if [ -n "$SSH_AUTH_SOCK" ]; then
+  docker run -it --rm -e USER="$USER" -e SSH_AUTH_SOCK=$SSH_AUTH_SOCK -v $SSH_AUTH_SOCK:$SSH_AUTH_SOCK -v $PWD:/mnt -v $HOME/.ssh:/root/.ssh:ro ubuntu
+else
+  docker run -it --rm -e USER="$USER" -v $PWD:/mnt -v $HOME/.ssh:/root/.ssh:ro ubuntu
+fi
 ```
 
 ::: tip
@@ -58,11 +62,11 @@ cd /mnt
 
 Start 3 VMs (one master and 2 workers) where the k8s will be installed.
 
-* Terraform diagram:
+Terraform diagram:
 
-  ![Terraform](https://cdn-images-1.medium.com/max/1200/1*lYFNHNM03biX_95IQMayUw.png
-  "Terraform")
-  ([https://hackernoon.com/terraform-openstack-ansible-d680ea466e22](https://hackernoon.com/terraform-openstack-ansible-d680ea466e22))
+![Terraform](https://cdn-images-1.medium.com/max/1200/1*lYFNHNM03biX_95IQMayUw.png
+"Terraform")
+([https://hackernoon.com/terraform-openstack-ansible-d680ea466e22](https://hackernoon.com/terraform-openstack-ansible-d680ea466e22))
 
 Generate ssh keys if not exists:
 
